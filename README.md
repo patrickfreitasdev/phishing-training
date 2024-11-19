@@ -46,6 +46,12 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ```
 
+Don't forget to run the queue worker:
+
+```
+php artisan queue:work
+```
+
 Note: The counter increases up to 4 programmatically to similate the number of people accessing the page, but it doesn't save the state, meaning that if you refresh the page the counter will reset. We also don't save any data to control if the /join-game access is new or returning visitors, so each refresh the counter will increase.
 
 ### Usage
